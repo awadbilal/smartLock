@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { ImageBackground } from 'react-native';
+import Background from './assets/appBackground.png';
+import Links from './Components/Routes';
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ImageBackground source={Background} style={{ flex: 1 }}>
+      <Links />
+    </ImageBackground>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+
+// The following line is to disable all warnings (Keys, depreciated packages, etc...)
+console.disableYellowBox = true;
